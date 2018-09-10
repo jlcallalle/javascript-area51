@@ -1,0 +1,95 @@
+Pre-requisitos
+	Tener conocimientos de HTML5 y CSS3.
+	Predispuesto a aprender a programar y no rendirse.
+
+Temario Curso Javascript
+
+Variables
+	Alcances
+	Var vs Let vs Cons
+
+Funciones
+	Tradicionales
+	Flecha
+	El objeto this
+	Argumentos
+
+Selectores:
+	Selectores de etiqueta, clase y id
+	Selectores generales
+
+Eventos:
+	Eventos de mouse
+	Eventos de teclado
+	Eventos de móviles
+	Eventos no generados por usuarios
+
+Plantillas de texto:
+	Introducción
+	Generando html
+
+Desestructuración de datos:
+	JSON
+	Arreglos
+	
+Bucles:
+	or
+	while
+	do while
+	for… in
+	for… of
+Arreglos
+	Utilidad
+	Métodos:
+	push,
+	pop,
+	unshift,
+	shift,
+	map,
+	reduce,
+	filter,
+	find,
+	findIndex,
+	some,every
+	Conversiones: Array.fromS
+
+Spreads:
+	Definición
+	Aplicación en argumentos y arreglos
+
+Promesas:
+	Introducción
+	Encadenamiento
+	Múltiples promesas
+
+Comunicación asíncrona:
+	Usando XMLHttpRequest
+	Usando Fetch
+
+Símbolos:
+	Introducción
+	Utilidad
+
+Clases y herencias:
+	Definición de clases
+	Definición de herencias
+	Contextos
+
+Generadores:
+	Introducción
+	Generador vs Promesa
+
+Proxies:
+	Definición
+	Aplicación de proxies
+
+Set y Map:
+	Definición y uso de Set y Map
+	Automatización con Webpack
+
+Módulos:
+	Definición
+	Cuándo y cómo usarlos
+
+
+<hola>asd </hola> = > Formator XML
