@@ -1,4 +1,5 @@
-Temas:
+CLASE 1:
+Repositorio: Github: https://github.com/Area51TrainingCenter/JavaScript-Group14
 
 Introducción JavaScript
 - ¿Qué es JavaScript y qué es EcmaScript?
@@ -10,24 +11,23 @@ Inspeccionar Código:
 document.write('hola')
 ver consola: https://interbank.pe/
 
-Enviroment MAC
-cmd + espaciado , muestra busqueda
-En mac terminal : Iterm2 : recomendado
-En windows : CMDer
+Enviroment MAC:
+cmd + espaciado: muestra busqueda
+En mac terminal recomienda: Iterm2
+En windows terminal : Cmder
 
-Cambiar Interface terminal:
-En terminal de Mac x fault y file, preferent / profile / Howebrew
-
+Cambiar Interface Default terminal
+En terminal de Mac cambiar theme: File, Preferents / Profile / Howebrew
 
 Comandos básicos para Unix (bash)
 
-A51MM-12:~ alumno$ cd ~ (lleva al home) (alt + ñ = ~)
+A51MM-12:~ alumno$ cd ~ (go home) (alt + ñ = ~)
 /Users/alumno
 
 ls -a : mostrar archivos ocultos
 
-A51MM-12:javascript-area51 alumno$ echo "hola alumnos de Area51" > frase.txt
-A51MM-12:javascript-area51 alumno$ open frase.txt 
+$ echo "hola alumnos de Area51" > frase.txt
+$ open frase.txt 
 
 Para guardar lista en carpeta
 A51MM-12:javascript-area51 alumno$ ls > listado.txt
@@ -36,30 +36,30 @@ Si deseo agregar en 2 lineas:
 A51MM-12:javascript-area51 alumno$ echo "hola Jorge Callalle" >>  prueba.txt
 
 
-Github: https://github.com/Area51TrainingCenter/JavaScript-Group14
-
 Iniciar Proyecto
 A51MM-12:~ alumno$ cd ~ 
 A51MM-12:~ alumno$ cd Desktop/
 
 Instalar VisualStudio
-una vez instalado ingresar, en terminal code, y muestra
+Una vez instalado ingresar, en terminal e ingresar 'code'
 
-Cloud9, IDE en WEB
-VISUAL STUDIO CODE: Plugins
-Sublime Text Keymap and Settings Importer
+
+VISUAL STUDIO CODE:
+Plugins
+ - Sublime Text Keymap and Settings Importer
 
 
 Diferencia Entre ES5 y ES6
-https://codeburst.io/es5-vs-es6-with-example-code-9901fa0136fc
 
 const greetings = (name) => {
  return `hello ${name}`;
 }
 
-var ya no se debe de usar, en ES6, 
+var ya no se debe usar en ES6, 
 const: las constantes le das un valor y ya no cambia
-let:  era lo mismo que hera antes var
+let: Es lo mismo que var
+
+Buenas Practicas : Ejemplo AIRBN
 
 Convenciones ARNB, son patrones, buenas practicas
 https://github.com/airbnb/javascript
@@ -72,7 +72,6 @@ var a = 1;
 var b = 2;
 
 var a = 1
-undefined
 a
 1
 b = 2
@@ -80,9 +79,10 @@ b = 2
 b
 2
 
-sin escribir var tbn funciona, pero no es correcto
+Sin escribir var tbn funciona, pero no es correcto.
 
+Integrantes del Grupo
 Julio: .Net 
 Alexis, Agencia Digital
-Andrea, digitalizacion 
+Andrea, Digitalizacion 
 Cesar, Everis
