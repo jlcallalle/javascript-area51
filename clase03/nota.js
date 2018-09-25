@@ -1,46 +1,62 @@
 //Funciones
 
-function saltar(metros) {
-    console.log(`Salto {metros}`);
-}
-saltar(4);
+let mensaje;
 
-let nombre = 'Jorge';
-console.log('hola ' + 234234);
+// ES5
+mensaje = 'Hola ' + 123;
 
-console.log(`hola ${1 + 2 + 3}`);
+// ES6+
+mensaje = `Hola ${123}`;
+
+console.log(mensaje);
 
 // --
 
-function suma (a,b) {
-    console.log(`la suma de `)
+function saltar(metros) {
+	console.log(`Salto ${metros} metros`);
 }
-//  function alCuadrado (numero) {
-   //  console.log(``)=)
-// )
+saltar(4);
 
-//ejercicios de arriba no salio x el teclado
+// --
+function sumar(a, b) {
+	console.log(`La suma de ${a} + ${b} es ${a + b}`);
+}
+sumar(6, 2);
+
+// --
+function alCuadrado(numero) {
+	console.log(`${numero} al cuadrado es igual a ${numero * numero}`);
+}
+alCuadrado(3);
 
 // -----
 function sumar( a, b ) {
     const resultado = a + b;
     return resultado;
 }
+//
 let resultadoSuma = sumar(6, 3);
 console.log(resultadoSuma);
-// 9, profe realizo depuracion breackpoints
 
 // --
 function alCubo(numero) {
-    const resultado = numero ** 3;
-    return resultado;
-}
-console.log(alCubo(3));
+    return numero * numero * numero;
+  }
+  
+  console.log( alCubo(3) ); // 27
+  console.log( `El resultado es: ${alCubo(3)}` );
+  
 //var elevado = 3 ** 3;
-
 
 //Ejercicios
 //https://bit.ly/2xyQAD8
+
+/*......*/
+
+
+
+
+
 
 
 function obtenerNombreCompleto(nombre, apellidoPaterno, apellidoMaterno) {

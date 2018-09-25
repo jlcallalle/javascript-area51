@@ -17,3 +17,12 @@ Temas:
 - [Tipos de Datos](./docs/js-tipos-de-datos.md).
 - [Funciones: Introducción](./docs/js-funciones.md).
 
+
+## Clase 03
+
+Temas:
+
+- [Variables](./docs/js-variables.md).
+- [Tipos de Datos](./docs/js-tipos-de-datos.md).
+- [Funciones: Introducción](./docs/js-funciones.md).
+

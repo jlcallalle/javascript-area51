@@ -1,59 +1,57 @@
+//Variables: var, let, const
 //una variable es como un vaso vacio, en el cual puedo agregar un valor
-ES5
-var edad;
 
-ES6
-let edad;
-edad = 23;
-edad= 24;
+//ECMASCRIPT 5 (ES5)
+var edad = 23;
+var colorPiel = 'blanca';
 
-// --
+// ECMASCRIPT 6 a más (ES6+)
+let edad = 30;
+const colorPiel = 'blanca';
 
-const cantidadCasas = 2 // solo recibe un valor solo al declararse
-cantidadCasas = 3 //  muestrar error, no puede asignar otro valor
+const cantidadCasas = 2 // Solo recibe un valor al declararse
+cantidadCasas = 3 //  Muestrar error, no se puede asignar otro valor que el inicial
 
 let edad; // Declaracion de varialbe
 edad = 23; // Declaración y asignación
 
-// --
-let nombre;
-// -> undefined
 
-Tipos de Datos;
+// -- Tipos de Datos; //
 
-1) String:
+// 1- String:
 'Jorge Callalle'
 const nombreCompleto = 'Jorge Callalle'; // String
 // por convención se recomienda usar '', tambien se puede usar "";
 
-2) Number
+// 2- Number
 51
 const area = 51; // Number
 
-3) Boleano // como un switch, encendido y apagado
+// 3-  Boleano // como un switch, encendido y apagado
 false
 true
 const cursosOnline = false // Boolean
 
 
 let carrera; // Haz declarado la variable carrera
-const brazoz; // muestrar error, porque se necesita iniciar valor;
-const autos = 3; // he declarado una constante de valor 3; tipo dato number
+const brazoz; // Muestrar error, porque se necesita iniciar valor;
+const autos = 3; // He declarado una constante de valor 3; tipo dato number
 const titulo = 'Aplicaciones Móviles'; // tipo de datos String
 
-//Pregunto  si se familiariza '' y ""
 
 //Estandares de varialbles
-// no 
+
+// no hacer
 let 23area //no empezar connumero
 let @asdasd  // no empezar con @
 
-//si
+// si hacer
 let _sdfsd
 let esta_luz_encendida //guion medio no se recomienda
 
 //Boleano
 let EstaLuzEncendida = false;
+
 !false
 true
 
@@ -95,11 +93,25 @@ JSON // se recomienda usar comillas dobles ""
 Formato declarativo de datos
 - YAML
 
-
 // -- Objetos -- //
+
+/* 
+JavaScript está diseñado en un paradigma basado en objetos. 
+
+Un objeto es una colección de propiedades, y una propiedad es una asociación entre un nombre y un valor.
+Un valor de propiedad puede ser una función, la cual es conocida entonces como un método del objeto
+
+Además de los objetos que están predefinidos en el navegador, tu puedes definir tus propios objetos.
+
+Los objectos en JavaScript, al igual que en muchos otros lenguajes de programación, pueden ser comparados con objetos de la vida real. El concepto de Objetos en JavaScript se puede entender como en la vida real, objetos tangibles.
+
+En JavaScript, un objecto es un entidad independiente con propiedades y tipos. Compárelo con una taza por ejemplo. Una taza es un objeto, con propiedades. Una copa tiene un color, un diseño, peso, un material del que fue hecho, etc. De la misma manera, los objetos de JavaScript pueden tener propiedades, que definen sus características.
+
+*/
+
 Object
 Hay 2 formas 
-const miObjecto = {};
+const miObjecto = {}; //correcta 
 const miObjecto2 = new Object();
 
 miObjecto
@@ -119,7 +131,6 @@ miObjeto3.nombre
 
 const miObjeto5 = {}
 undefined
-miObjeto4.nombre = 'Andrea';
 miObjeto5.nombre = 'Andrea';
 
 miObjeto5.edad = 23;
@@ -141,7 +152,7 @@ Al pulsar tecla TAB
 \t
   
 // Si vas a declarar un objeto, si va tener una sola propiedad este e 1 linea
-const auto1 = { marca: 'Toyota'};
+const auto1 = { marca: 'Toyota' };
 
 // Si tiene más de 2 propiedades se usa 2 lineas, con linter (plugin) te notifica
 const auto2 = {
@@ -157,18 +168,19 @@ auto3.tieneAlarma = true;
 auto3.piezas = {}; // el objeto auto3 tiene una propiedad objeto piezas
 auto3.piezas.motor = 'v8';
 
-Practica
+//Practica
 
 //declarar una variable nombre titulo y en la misma linea asignar valor carrera de sistemas;
-
 let nombreTitulo = 'Carrera de Sistemas';
+
 
 //En ES6 Si existen las constantes, en ES5 no tiene constantes
 // crear constante anhos, con valor 5
 const anhos = 5;
 
 // crear constante empleado, de tipo objeto sin propiedades
-// *********** cuando es con {} se usa ' = ' ***********
+// y luego asignar propiedades, con igual) (*********//********) 
+
 const empleado = {}
 empleado.nombre = 'Jorge';
 empleado.edad = 29;
@@ -176,9 +188,8 @@ empleado.edad = 29;
 empleado
 {nombre: "Jorge", edad: 29}
 
-//Hay otra forma 
+//Hay otra forma, cuando se declara el objeto y se asigna propiedades, se usa : (********//******) 
 const empleado = { nombre: 'Jorge', edad: 34 };
-// *********** cuando en linea  {} se usa ' = ' ***********
 
 
 //Nota
@@ -220,9 +231,10 @@ const miArreglo4 = [
   "Renzo", 
   "Castro"
 ];
+
 //Solo Numbers
 const miArreglo5 = [ 29 ];
-const miArreglo6 = [ 1, 2, 3, 4 ];
+const edades = [21, 33, 27];
 
 //Mixo
 const miArreglo7 = ["Renzo", 1]
@@ -243,7 +255,6 @@ amigos[0]
 amigos[1]
 "Lucas"
 
-
 Para auto:
 - Propiedades: kilometraje; valor: 120
 - Propuedades: color; valor: Rojo
@@ -259,6 +270,13 @@ Para alumnos:
 const alumnos = [];
 alumnos.push('Julio')
 alumnos.push('Diana')
+
+const colores = ['blanco', 'verde', 'rojo'];
+colores.push('azul');
+
+console.log(colores); // (4) ["blanco", "verde", "rojo", "azul"]
+console.log(colores[2]); // "rojo"
+console.log(colores[1 + 1]); // "rojo"
 
 //Mostrar las mascotas
 const mascotas = [];
@@ -283,13 +301,11 @@ mascotas
 En Object,
 - hasOwnProperty
 
-
 const empleado = {};
-undefined
 empleado.hasOwnProperty('nombre');
 false
 empleado.nombre = "Jorge"
-"Jorge"
+
 empleado.hasOwnProperty('nombre');
 true
 empleado
@@ -297,7 +313,7 @@ empleado
 
 En Arrays, tanto para String hay propiedades:
  - .push()
- - length 
+ - length  // empleado.nombre.length
  - hasOwnProperty
 
 En number hay propiedades:
@@ -308,31 +324,29 @@ En number hay propiedades:
  pago
 45.53
 
-Math.round(pago)
+Math.round(pago) // convierte decimales
 46
 
-pago.toFixed(4)
+pago.toFixed(4) // agregar 4 digitos
 "45.5300"
 
 pago.toFixed(0)
 "46"
 
 //Se ussa para
-
 pago.toFixed(2)
 "45.53"
 
 //console.log()
 //console = es un objeto 
 //log = funcion 
-
 // ----------
 
 
-//CREANDO ESTRUCTURA DE DATOS
+//CREANDO ESTRUCTURA DE DATOS 
 // los objetos son similares, pero los valores cambian
 
-// Este es un array que contiene 2 objetos
+// Este es un array que contiene 2 objetos (Arreglo de Objetos)
 
 const menu = [
   {
@@ -345,11 +359,11 @@ const menu = [
   }
 ];
 
-//Mostrar el valor 1
 
-menu[1]
+//Mostrar el valor 1
+menu[1] //para acceder a arrays es con []
 > {name: "Productos", url: "/productos.html"}
-menu[1].name
+menu[1].name //para acceder a objetos es con .
 > "Productos"
 menu[0]
 > {name: "Inicio", url: "/index.html"}
@@ -359,7 +373,7 @@ menu[0].name
 > "Inicio"
 
 const menu2 = [];
-> undefined
+
 menu2.push({ name: 'Inicio', url: '/index.html' });
 > 1
 menu[0]
@@ -373,6 +387,7 @@ menu[1]
 menu[1].url
 >  "/productos.html"
 
+//Objeto de arreglos
 const auto = {
   llantas : [
     { estado: 'ok'},
@@ -397,7 +412,7 @@ const familia2 = {
   ]
 }
 
-
+//Para llamar un objeto {} se usa .
 familia2.madre.nombre
 >  "Andre"
 familia2.padre.nombre
@@ -406,19 +421,81 @@ familia2.hijos[2]
 >  {nombre: "Jorge"}
 familia2.hijos[2].nombre
 >  "Jorge"
-//Para llamar {} se usa .
 
 
-// en objetos hay una asignación
+// En objetos hay una asignación
 const obj = {
   name: 'Liz'
 }
 familia.push ( { nombre: 'Carlos'}  ) 
 
-FUNCIONES
-// Es un tipo de dato
-// se puede usar directamente
 
+//Ejercicios
+//Un padre tienes 2 hijos, cada hijo tiene un nombre y una edad.
+ 
+const padre = {
+  nombre: 'Julio',
+  hijos: [
+    {
+      nombre: 'Pedro',
+      edad: 12
+    },
+    {
+      nombre: 'Juan',
+      edad: 7
+    }
+  ]
+};
+
+console.log(padre.hijos[0].nombre); // Pedro
+
+//--
+
+const padre = {
+  nombre: 'Julio',
+  hijos: [
+    {
+      nombre: 'Pedro',
+      edad: 36,
+      hijos: [
+        {
+          nombre: 'Mateo',
+          edad: 3
+        },
+        {
+          nombre: 'Diana',
+          edad: 1
+        }
+      ]
+    },
+    {
+      nombre: 'Juan',
+      edad: 17
+    }
+  ]
+};
+
+console.log(padre.hijos[0].hijos[1].nombre); // Diana
+
+//--
+
+const tabla1 = [
+	{ name: 'AmeriGas', shares: 200 },
+	{ name: 'Duke Energy', shares: 150 }
+];
+console.log(tabla1[0].shares); // 200
+
+
+const item1 = { name: 'AmeriGas', shares: 200 };
+const item2 = { name: 'Duke Energy', shares: 150 };
+const tabla2 = [ item1, item2 ];
+
+console.log( tabla2[1].shares ); // 150
+
+
+
+FUNCIONES
+// Es un tipo de dato,  se puede usar directamente
 //Declaración de funcion, es declarativo no se ejecuta solo
 function saludo() {
   let edad = 23;
@@ -429,13 +506,28 @@ function saludo() {
 //Ejecución (o uso) de la función
 saludo();
 
+//Declaracion de funcion, esperando un parametro (argumento)
+//considere este argumento como variable predeclarada
 function saludo2(mensaje) {
   console.log(mensaje);
 }
-//declaracion de funcion, esperando un parametro (argumento)
-// considere este argumento como variable predeclarada
+
 saludo2('Hola Area51');
 
+
+// Usando una variable del scope superior:
+let nombre = 'Carlos';
+function saludo() {
+	console.log('Hola ' + nombre + '!');
+}
+saludo();
+
+
+//Usando un parámetro:
+function saludo(nombre) {
+	console.log('Hola ' + nombre + '!');
+}
+saludo('Carlos');
 
 //Function Sumar
 
@@ -457,10 +549,51 @@ const saludo = function () {
 //el tipo de dato que tiene saludo es function
 saludo();
 
+
+
+//Llenado de un Array usando una función:
+
+let categorias = [];
+
+function insertarCategoria(nombreCategoria) {
+	categorias.push(nombreCategoria);
+}
+
+insertarCategoria('Computadoras');
+insertarCategoria('Audio y Video');
+
+
+//Llenado de un Array formateado como tabla de multiplicar del 2:
+
+let tabla = [];
+
+function agregarLinea(n) {
+	tabla.push('2 x ' + n + ' = ' + (2 * n));
+}
+
+agregarLinea(1);
+agregarLinea(2);
+agregarLinea(3);
+agregarLinea(4);
+agregarLinea(5);
+
+console.log(tabla);
+/*
+[
+	'2 x 1 = 2',
+	'2 x 2 = 4',
+	'2 x 3 = 6',
+	'2 x 4 = 8',
+	'2 x 5 = 10'
+]
+*/
+
+
+
+
 Tipo de variable funcion, tiene varios metodos:
 saludo.call()  
 saludo.apply()  //SCOPE y Alcance
-
 
 //Operadores Matemáticos
 1 + 2
@@ -486,7 +619,7 @@ const familia2 = {
       { nombre: 'Pedro'}
 	]
 }
-> undefined
+
 familia2.hijos.length
 > 1
 !familia2.hijos.length  //negacion
@@ -507,7 +640,6 @@ familia2.hijos.length > 1
 >= mayor o igual a
 <= menor o igual a
 != distinto de
-
 
 Boolean(0)
 > false
@@ -537,14 +669,14 @@ Boolean(12312312)
 > true
 
 
-Operadores de comparacion
+Operadores de comparación
 
 Si ve que es un formato distinto lo va a convertir a un dato numerico
 
 "1" == 1
 true
 
-ademas de su contenido, si son el mismo de datos, 
+Ademas de su contenido, si son el mismo de datos, 
 para asegurarse que los que se comparan son iguales
 
 "1" === 1
@@ -572,4 +704,3 @@ if (1 === 0) {
 } else {
 	console.log('No es igual');
 }
-VM574:4 No es igual
