@@ -1,4 +1,6 @@
-//Funciones
+//https://bit.ly/2xyQAD8
+
+// Concatenación
 
 let mensaje;
 
@@ -41,22 +43,14 @@ console.log(resultadoSuma);
 // --
 function alCubo(numero) {
     return numero * numero * numero;
-  }
+}
   
-  console.log( alCubo(3) ); // 27
-  console.log( `El resultado es: ${alCubo(3)}` );
+console.log( alCubo(3) ); // 27
+console.log( `El resultado es: ${alCubo(3)}` );
   
 //var elevado = 3 ** 3;
 
-//Ejercicios
-//https://bit.ly/2xyQAD8
-
-/*......*/
-
-
-
-
-
+//EJERCICIOS 
 
 
 function obtenerNombreCompleto(nombre, apellidoPaterno, apellidoMaterno) {
@@ -103,13 +97,11 @@ agregarAlumno('Carlos');
 
 console.log(`Total de Alumnos: ${alumnos.length} `); // "Total de Alumnos: 2"
 
-
 // Extensiones Visual Studio Code
 // Material Icon Theme (cambia iconos de tema)
 
 /*
 control p> para mostrar achivos
-
 control ship p: muestra configuracion
  ingreso theme, elegir editor
 
@@ -129,7 +121,6 @@ control ship p: muestra configuracion
 
  "editor.renderWhitespace": "none",
 elegir bundary
-
 
 Project Manager
 */
@@ -155,13 +146,32 @@ if (1 > 2) {
     console.log('No puede salir');
   }
 
-//Bucles o Iteraciones
+
+  /*****************************************************/
+/**********   Bucles o Iteraciones   ************/
+/*****************************************************/
+
 //la primera area es decalrativa, se lee una sola vez
 //segundo, siempre se ejecuta cada interacion, vale 0 a inicio
 // el tercero, es un incremento mas uno
 for (var i = 0; i < 5; i++) {
     console.log(i);
 }
+
+/*
+  i++  // i = i + 1 (después)
+  ++i  // i = i + 1
+
+  i--  // i = i - 1 (después)
+  --i  // i = i - 1
+
+  i =+ 1   // i = i + 1
+  i =- 1   // i = i - 1
+
+  i =+ 3   // i = i + 3
+  i =- 3   // i = i - 3
+*/
+
 
 //usar siempre menor o mayor que
 
@@ -208,29 +218,25 @@ for (i = 1; i < 11; ++i) {
   }
 }
 
-// Bucle de todos los números pares entre 1 y 11
-let i;
-for (i = 1; i < 11; ++i) {
-  if (i % 2 === 0) {
-    console.log(i);
-  }
-}
-
 let i;
 // for (i = 2; i <= 10; i = i + 2) {
 for (i = 2; i <= 10; i += 2) {
   console.log(i);
 }
 
-
-
 let i;
-for ( i = 0; i < 10; ++i) {
+for (i = 0; i < 10; ++i) {
     console.log(i);
-    console.log('Final')
-    if( i === 2) {
+
+    if (i === 2) {
+        continue;
+    }
+
+    if (i === 5) {
         break;
     }
+
+    console.log('FINAL');
 }
 
 //breack, finaliza
@@ -239,9 +245,10 @@ for ( i = 0; i < 10; ++i) {
 
 // Ejercicios
 
-
 // recorrer un array
+
 const alumnos = ['carlos','diana','pedro'];
+
 let i;
 for ( i = 0; i < alumnos.length; ++i) {
     console.log(`${i} es ${alumnos[i]}`);
@@ -250,35 +257,93 @@ for ( i = 0; i < alumnos.length; ++i) {
 
 // --
 
-// do ..white
+// while
 let i = 0;
 
-//Si se quiere recorer un array, FOR OF
+while (i < 3) {
+    i++;
+    console.log(i);
+}
 
-// Googear
+// for in
+let key;
+const auto = { marca: 'ford', color: 'azul' };
 
-MAS VAMOS A TRABAJAR CON ARRAYS Y OBJETOS
-
-
-
-///
-for each no retorna, pero map si retorna
-en el caso el array
-,
-para cambiar el contenido del arrego se usa map
+for (key in auto) {
+    console.log(key, auto[key]);
+}
+// marca
+// color
 
 
-//EJERCICIOS
-// Recorrer el Foreach
+// for of   // ES6+
+let alumno;
+const alumnos = ['Pedro', 'Diana', 'Jorge'];
+
+for (alumno of alumnos) {
+    console.log(alumno);
+}
+// Pedro
+// Diana
+// Jorge
+
+// --
+
+const alumnos = ['Carlos', 'Diana', 'Pedro'];
+
+alumnos.forEach(function (alumno, indice, arreglo) {
+    console.log(alumno, indice, arreglo);
+});
+
+alumnos.forEach(function (alumno, indice) {
+    console.log(alumno, indice);
+});
+
+alumnos.forEach(function (alumno) {
+    console.log(alumno);
+});
+
+// -- Array forEach
+const alumnos = ['Carlos', 'Diana', 'Pedro'];
+
+const mostrarAlumno = function (alumno) {
+    console.log(alumno);
+};
+
+alumnos.forEach(mostrarAlumno);
+
+// -- Array map
+
+const alumnos = ['Carlos', 'Diana', 'Pedro'];
+
+const convertirAMayusculas = function (texto) {
+    return texto.toUpperCase();
+};
+
+const alumnosMayuscula = alumnos.map(convertirAMayusculas);
+console.log(alumnosMayuscula);
+
+// --
+
 const numeros = [2, 3, 4];
 
 const mostrarNumero = function (numero) {
-  console.log(numero);
+    console.log(numero);
 };
 
 numeros.forEach(mostrarNumero);
 
-// Array Map, arrayMap se utiliza mas para obtener un array y
+// 2
+// 3
+// 4
+
+
+// -- usar Array map (se utiliza mas para obtener un array)
+
+//Si se quiere recorer un array, FOR OF
+/* for each no retorna, pero map si retorna
+en el caso el array , para cambiar el contenido del arrego se usa map */
+
 
 const numeros = [2, 3, 4];
 
@@ -289,8 +354,10 @@ const masUno = function (numero) {
 const nuevosNumeros = numeros.map(masUno);
 console.log(nuevosNumeros);
 
+//EJERCICOS 
+
 /// /--.map
-//MOSTRAR  ["0 ADRIANA", "1 MARIA", "2 YESSI"]
+// Mostrar  ["0 ADRIANA", "1 MARIA", "2 YESSI"]
 
 //primero necesitamos una funcion que nos haga el cambio
 
@@ -304,6 +371,7 @@ const resultado = empleados.map(convertirAMayusculas);
 console.log(resultado);
 
 // -- .map
+// Mostrar ['perro 5', 'gato 4', 'loro 4']
 const mascotas = ['Perro', 'Gato', 'Loro'];
 const nuevoMascota = function (texto) {
     return `${texto.toLowerCase()} ${texto.length}  `;
@@ -323,7 +391,7 @@ const miBucle = function (f) {
   for (indice = 0; indice < mascotas.length; indice++) {
     const mascota = mascotas[indice];
 
-    f( mascota, indice, mascotas );
+    f(mascota, indice, mascotas);
   }
 
 };
@@ -337,6 +405,20 @@ miBucle(mostrar);
 
 mascotas.forEach(mostrar);
 
+
+// callback
+const prueba = function (f) {
+  f('hola');
+};
+
+const mostrar = function (mensaje) {
+  console.log(mensaje);
+};
+
+prueba(mostrar);
+
+
+
 // -- .map
 
 const alumnos = [
@@ -347,16 +429,16 @@ const alumnos = [
 
   // ["PEDRO 23", "JUAN 21", "ROSA 25"]
 
-  const convertirAMayusculas = function (alumno) {
+  const cambiar = function (alumno) {
     return `${alumno.nombre.toUpperCase()} ${alumno.edad}`;
   };
 
-  const resultado = alumnos.map(convertirAMayusculas);
-  console.log(resultado);
+  alumnos.map(cambiar);
+  //const resultado = alumnos.map(cambiar);
+  //console.log(resultado);
 
 
   const numeros = [4,3,2,1];
-
   const sumar = function (a,b) {
       return a = b;
   }
@@ -364,12 +446,10 @@ const alumnos = [
   //reduce suma a y b y el resultado lo almacena en a
 
   //ARRAY TEMAS
-
   push, agregar
   shift, remueve
   Pop
   .join , une, retorna string
-
 
   forEach
   .map

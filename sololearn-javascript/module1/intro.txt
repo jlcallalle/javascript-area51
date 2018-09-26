@@ -1,0 +1,51 @@
+Welcome to JavaScript
+
+JavaScript is one of the most popular programming languages on earth and is used to add interactivity to webpages, 
+process data, as well as create various applications(mobile apps, desktop apps, games, and more)
+
+
+The document.write() function writes a string into our HTML document. This function can be used to write text, HTML, or both.
+The document.write() method should be used only for testing. Other output mechanisms appear in the upcoming lessons.
+
+Js inside <body> 
+It's a good idea to place scripts at the bottom of the <body> element.
+This can improve page load, because HTML display is not blocked by scripts loading.
+
+Variables 
+- JavaScript is case sensitive. 
+- A variable can be declared without a value
+- A variable declared without a value will have the value undefined.
+- In JavaScript, the equal sign (=) is called the "assignment"
+-  "equal to" 
+- JavaScript variable names are case-sensitiv
+
+BASIC COMPONENTS
+
+1) Naming Variables
+- Naming rules:
+  - The first character must be a letter, an underscore (_), or a dollar sign ($). Subsequent characters may be letters, digits, underscores, or dollar signs.
+  - Numbers are not allowed as the first character.
+  - JavaScript names must not contain spaces.
+
+  No usar special symbols,
+  my#num, num%, etc. y no usar palabras reservadas.
+
+2) Data Types
+  - Numbers
+  - strings 
+    // con ''backslash (\) escape character : caracteres de escapeca
+    var sayHello = 'Hello world! \'I am a JavaScript programmer.\' ';
+    document.write(sayHello);
+
+  - arrays
+
+3) Arithmetic Operators
+You can get the result of a string expression using the eval() function, 
+which takes a string expression argument like eval("10 * 20 + 8") and returns the result. 
+If the argument is empty, it returns undefined.
+
+Multiplication
+The multiplication operator (*) multiplies one number by the other.
+
+
+Operadores Matematicos

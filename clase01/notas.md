@@ -46,8 +46,9 @@ Una vez instalado ingresar, en terminal e ingresar 'code'
 
 VISUAL STUDIO CODE:
 Plugins
- - Sublime Text Keymap and Settings Importer
-
+-  Sublime Text Keymap and Settings Importer (Shourtcode Sublime)
+-  Material Icon theme
+-  Editorconfig for VSCode
 
 Diferencia Entre ES5 y ES6
 

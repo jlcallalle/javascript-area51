@@ -1,4 +1,7 @@
-//Variables: var, let, const
+/*****************************************************/
+/**********   VARIABLES: var, let, const  ************/
+/*****************************************************/
+
 //una variable es como un vaso vacio, en el cual puedo agregar un valor
 
 //ECMASCRIPT 5 (ES5)
@@ -7,51 +10,33 @@ var colorPiel = 'blanca';
 
 // ECMASCRIPT 6 a más (ES6+)
 let edad = 30;
-const colorPiel = 'blanca';
+const colorPiel = 'blanca'; //
 
-const cantidadCasas = 2 // Solo recibe un valor al declararse
-cantidadCasas = 3 //  Muestrar error, no se puede asignar otro valor que el inicial
+const cantidadCasas = 2 // Sólo recibe un valor único, no cambiante y requiere siempre un valor
+cantidadCasas = 3 
 
 let edad; // Declaracion de varialbe
 edad = 23; // Declaración y asignación
 
 
-// -- Tipos de Datos; //
 
-// 1- String:
+/*****************************************************/
+/*****************   Tipos de Datos  *****************/
+/*****************************************************/
+
+// 1- STRING:
 'Jorge Callalle'
-const nombreCompleto = 'Jorge Callalle'; // String
-// por convención se recomienda usar '', tambien se puede usar "";
+const nombreCompleto = 'Jorge Callalle'; 
 
-// 2- Number
+// 2- NUMBER
 51
-const area = 51; // Number
+const area = 51;
 
-// 3-  Boleano // como un switch, encendido y apagado
+// 3-  BOOLEANO 
 false
 true
-const cursosOnline = false // Boolean
-
-
-let carrera; // Haz declarado la variable carrera
-const brazoz; // Muestrar error, porque se necesita iniciar valor;
-const autos = 3; // He declarado una constante de valor 3; tipo dato number
-const titulo = 'Aplicaciones Móviles'; // tipo de datos String
-
-
-//Estandares de varialbles
-
-// no hacer
-let 23area //no empezar connumero
-let @asdasd  // no empezar con @
-
-// si hacer
-let _sdfsd
-let esta_luz_encendida //guion medio no se recomienda
-
-//Boleano
+const cursosOnline = false 
 let EstaLuzEncendida = false;
-
 !false
 true
 
@@ -66,7 +51,6 @@ Boolean(3) // True
 Boolean('Area 51') //True
 Boolean() //False
 Boolean('') //False
-
 
 !false
 true
@@ -84,33 +68,34 @@ false
 !!'asdasd' // contrario de !
 true
 
+let carrera; // Haz declarado la variable carrera
+const brazoz; // Muestrar error, porque se necesita iniciar valor;
+const autos = 3; // He declarado una constante de valor 3; tipo dato number
+const titulo = 'Aplicaciones Móviles'; // tipo de datos String
 
-// ---
-Estructura para Estructura de datos
-XML
-JSON // se recomienda usar comillas dobles ""
+//Estandares de varialbles
+// no permitido
+//let 23area 
+//let @asdasd 
 
-Formato declarativo de datos
-- YAML
+// si permitido
+let _sdfsd
+let esta_luz_encendida //guion medio no se recomienda
 
-// -- Objetos -- //
 
 /* 
-JavaScript está diseñado en un paradigma basado en objetos. 
-
-Un objeto es una colección de propiedades, y una propiedad es una asociación entre un nombre y un valor.
-Un valor de propiedad puede ser una función, la cual es conocida entonces como un método del objeto
-
-Además de los objetos que están predefinidos en el navegador, tu puedes definir tus propios objetos.
-
-Los objectos en JavaScript, al igual que en muchos otros lenguajes de programación, pueden ser comparados con objetos de la vida real. El concepto de Objetos en JavaScript se puede entender como en la vida real, objetos tangibles.
-
-En JavaScript, un objecto es un entidad independiente con propiedades y tipos. Compárelo con una taza por ejemplo. Una taza es un objeto, con propiedades. Una copa tiene un color, un diseño, peso, un material del que fue hecho, etc. De la misma manera, los objetos de JavaScript pueden tener propiedades, que definen sus características.
-
+- JavaScript está diseñado en un paradigma basado en objetos. 
+- Un objeto es una colección de propiedades, y una propiedad es una asociación entre un nombre y un valor.
+- Un valor de propiedad puede ser una función, la cual es conocida entonces como un método del objeto
+- Además de los objetos que están predefinidos en el navegador, tu puedes definir tus propios objetos.
+En JavaScript, un objecto es un entidad independiente con propiedades y tipos. Compárelo con una taza por ejemplo. 
+Una taza es un objeto, con propiedades. Una copa tiene un color, un diseño, peso, un material del que fue hecho, etc. De la misma manera, los objetos de JavaScript pueden tener propiedades, que definen sus características.
 */
 
-Object
-Hay 2 formas 
+
+// 4- OBJETOS 
+
+//Hay 2 formas 
 const miObjecto = {}; //correcta 
 const miObjecto2 = new Object();
 
@@ -120,7 +105,7 @@ miObjecto2
 {}
 
 //Cuando se crea un objeto, siempre se va agregar propiedades
-//si veo que tiene llave es de tipo Object
+//si veo que tiene llave es de tipo Object {}
 
 const miObjeto3 = { nombre : 'Jorge'};
 // el nombre es una propiedad de mi objeto
@@ -141,17 +126,7 @@ miObjeto5
 const miObjeto6 = {nombre:'Renzo', edad: 34};
 miObjeto6
 
-//cada tecla tiene un caracter, espacio tiene num 32
-Al pulsar tecla Enter
-13
-\n 
-\r\n
-
-Al pulsar tecla TAB 
-8
-\t
-  
-// Si vas a declarar un objeto, si va tener una sola propiedad este e 1 linea
+// Si se declara un objeto de una propiedad, se realiza en 1 linea
 const auto1 = { marca: 'Toyota' };
 
 // Si tiene más de 2 propiedades se usa 2 lineas, con linter (plugin) te notifica
@@ -168,18 +143,19 @@ auto3.tieneAlarma = true;
 auto3.piezas = {}; // el objeto auto3 tiene una propiedad objeto piezas
 auto3.piezas.motor = 'v8';
 
-//Practica
 
-//declarar una variable nombre titulo y en la misma linea asignar valor carrera de sistemas;
+
+//PRACTICA
+
+//Declarar una variable nombre titulo y en la misma linea asignar valor carrera de sistemas;
 let nombreTitulo = 'Carrera de Sistemas';
 
-
 //En ES6 Si existen las constantes, en ES5 no tiene constantes
-// crear constante anhos, con valor 5
+// Crear constante anhos, con valor 5
 const anhos = 5;
 
-// crear constante empleado, de tipo objeto sin propiedades
-// y luego asignar propiedades, con igual) (*********//********) 
+//Crear constante empleado, de tipo objeto sin propiedades
+//Se asigna valor a propiedades con '=') 
 
 const empleado = {}
 empleado.nombre = 'Jorge';
@@ -188,34 +164,33 @@ empleado.edad = 29;
 empleado
 {nombre: "Jorge", edad: 29}
 
-//Hay otra forma, cuando se declara el objeto y se asigna propiedades, se usa : (********//******) 
+//Hay otra forma, cuando se declara el objeto y se asigna propiedades, 
+//Se asigna valor a propiedades con ' : ') 
 const empleado = { nombre: 'Jorge', edad: 34 };
 
 
 //Nota
 let nombre = 'Renzo'
-let nombre = 'Jorge' // va salir error
-// se declara una vez y luego se cambia el valor
+let nombre = 'Jorge' // va salir error,  se declara una vez y luego se cambia el valor
 
 nombre = 'Jorge2';
 
 // Nota: -----------------
 //JS no es un LP que no sigue las rutas de puristas
 //JS no tiene tipado de datos: es decir desde su declaracion no se le asigna que tipo de datos es.
-let x;
 
+let x;
 //TypeScript
 //te da esa forma de agregar el tipo de datos a tus variables.
-
-let x: number;
-let miArreglo2:Array<string> = ["Renzo", "Castro"]
-let miArreglo2:Array<*> = ["Renzo", 29]
+//let x: number;
+//let miArreglo2:Array<string> = ["Renzo", "Castro"]
+//let miArreglo2:Array<*> = ["Renzo", 29]
 // -----------------
 
 
 
-// -- ARRAYS  --- /
-ARRAYS // Tipo Lista
+// 4- ARRAYS
+
 // Hay 2 tipos
 // Solo contiene valores, no propiedades
 // Se recomienda trabajar un solo tipo de variable para el contenido del array
@@ -236,11 +211,12 @@ const miArreglo4 = [
 const miArreglo5 = [ 29 ];
 const edades = [21, 33, 27];
 
-//Mixo
+//Mixto
 const miArreglo7 = ["Renzo", 1]
 // el procesamiento de array es mucho mams rapido si los valores tienen el mismo tipo de datos
 
-PUSH, Agregar Contenido en ARRAYS
+//PUSH  
+//gregar Contenido en ARRAYS
 //Push es una funcion, para usarlo se usa ()
 
 const amigos = [];
@@ -255,9 +231,10 @@ amigos[0]
 amigos[1]
 "Lucas"
 
+
 Para auto:
 - Propiedades: kilometraje; valor: 120
-- Propuedades: color; valor: Rojo
+  - Propuedades: color; valor: Rojo
 
 const auto = {};
 auto.kilometraje = 120;
@@ -265,7 +242,7 @@ auto.color = 'rojo';
 
 Para alumnos:
 - Agregar Julio
-- Agregar Diana
+  - Agregar Diana
 
 const alumnos = [];
 alumnos.push('Julio')
@@ -275,8 +252,8 @@ const colores = ['blanco', 'verde', 'rojo'];
 colores.push('azul');
 
 console.log(colores); // (4) ["blanco", "verde", "rojo", "azul"]
-console.log(colores[2]); // "rojo"
-console.log(colores[1 + 1]); // "rojo"
+console.log(colores[2]); 
+console.log(colores[1 + 1]); 
 
 //Mostrar las mascotas
 const mascotas = [];
@@ -286,13 +263,13 @@ mascotas.push('Loro')
 mascotas.push('Serpiente')
 mascotas[4]
 mascotas[3]
-
 mascotas[3] = 'Mono';
 mascotas[5] = 'Vaca';
 
 mascotas
-(6) ["Perro", "Gatos", "Loro", "Serpiente", empty, "Vaca"]
+  (6) ["Perro", "Gatos", "Loro", "Serpiente", empty, "Vaca"]
 
+  
 
 //PROOUEDADES POR DEFECTO DE LOS TIPOS DE DATOS
 //Todo programacion como base tiene objetos  
@@ -311,7 +288,7 @@ true
 empleado
 {nombre: "Jorge"}
 
-En Arrays, tanto para String hay propiedades:
+//En Arrays, tanto para String hay propiedades
  - .push()
  - length  // empleado.nombre.length
  - hasOwnProperty
@@ -343,9 +320,11 @@ pago.toFixed(2)
 // ----------
 
 
-//CREANDO ESTRUCTURA DE DATOS 
-// los objetos son similares, pero los valores cambian
+/*****************************************************/
+/********** Creando estructura de datos  *************/
+/*****************************************************/
 
+// Los objetos son similares, pero los valores cambian
 // Este es un array que contiene 2 objetos (Arreglo de Objetos)
 
 const menu = [
@@ -359,8 +338,6 @@ const menu = [
   }
 ];
 
-
-//Mostrar el valor 1
 menu[1] //para acceder a arrays es con []
 > {name: "Productos", url: "/productos.html"}
 menu[1].name //para acceder a objetos es con .
@@ -373,7 +350,6 @@ menu[0].name
 > "Inicio"
 
 const menu2 = [];
-
 menu2.push({ name: 'Inicio', url: '/index.html' });
 > 1
 menu[0]
@@ -386,6 +362,32 @@ menu[1]
 > {name: "Productos", url: "/productos.html"}
 menu[1].url
 >  "/productos.html"
+
+
+const menu3 = [
+  {
+    name: 'Inicio',
+    url: '/index.html'
+  },
+  {
+    name: 'Productos',
+    children: [
+      {
+        name: 'Secadora',
+        url: 'productos/secadora.html'
+      },
+      {
+        name: 'Lavadora',
+        url: 'productos/lavadora.html'
+      },
+      {
+        name: 'Escobas',
+        url: 'productos/escobas.html'
+      },
+    ]
+  }
+];
+
 
 //Objeto de arreglos
 const auto = {
@@ -430,7 +432,9 @@ const obj = {
 familia.push ( { nombre: 'Carlos'}  ) 
 
 
-//Ejercicios
+
+
+//EJERCICIOS
 //Un padre tienes 2 hijos, cada hijo tiene un nombre y una edad.
  
 const padre = {
@@ -493,9 +497,13 @@ const tabla2 = [ item1, item2 ];
 console.log( tabla2[1].shares ); // 150
 
 
+/*****************************************************/
+/*****************   FUNCIONES  *****************/
+/*****************************************************/
 
-FUNCIONES
+
 // Es un tipo de dato,  se puede usar directamente
+
 //Declaración de funcion, es declarativo no se ejecuta solo
 function saludo() {
   let edad = 23;
@@ -549,8 +557,6 @@ const saludo = function () {
 //el tipo de dato que tiene saludo es function
 saludo();
 
-
-
 //Llenado de un Array usando una función:
 
 let categorias = [];
@@ -589,9 +595,7 @@ console.log(tabla);
 */
 
 
-
-
-Tipo de variable funcion, tiene varios metodos:
+//Tipo de variable funcion, tiene varios metodos:
 saludo.call()  
 saludo.apply()  //SCOPE y Alcance
 
@@ -670,7 +674,6 @@ Boolean(12312312)
 
 
 Operadores de comparación
-
 Si ve que es un formato distinto lo va a convertir a un dato numerico
 
 "1" == 1

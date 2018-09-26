@@ -14,24 +14,24 @@ console.log(mensaje);
 // --
 
 function saltar(metros) {
-	console.log(`Salto ${metros} metros`);
+  console.log(`Salto ${metros} metros`);
 }
 saltar(4);
 // --
 function sumar(a, b) {
-	console.log(`La suma de ${a} + ${b} es ${a + b}`);
+  console.log(`La suma de ${a} + ${b} es ${a + b}`);
 }
 sumar(6, 2);
 // --
 function alCuadrado(numero) {
-	console.log(`${numero} al cuadrado es igual a ${numero * numero}`);
+  console.log(`${numero} al cuadrado es igual a ${numero * numero}`);
 }
 alCuadrado(3);
 // --
 
 function sumar(a, b) {
-	const resultado = a + b;
-	return resultado;
+  const resultado = a + b;
+  return resultado;
 }
 
 let resultadoSuma = sumar(6, 3);
@@ -40,7 +40,7 @@ console.log(resultadoSuma);
 // --
 
 function sumar(a, b) {
-	return a + b;
+  return a + b;
 }
 
 let resultadoSuma = sumar(6, 3);
@@ -52,13 +52,13 @@ function alCubo(numero) {
   return numero * numero * numero;
 }
 
-console.log( alCubo(3) ); // 27
-console.log( `El resultado es: ${alCubo(3)}` );
+console.log(alCubo(3)); // 27
+console.log(`El resultado es: ${alCubo(3)}`);
 
 // --
 
 function obtenerNombreCompleto(nombre, apellidoPaterno, apellidoMaterno) {
-	return `${nombre} ${apellidoPaterno} ${apellidoMaterno}`;
+  return `${nombre} ${apellidoPaterno} ${apellidoMaterno}`;
 }
 
 let nombreCompleto = obtenerNombreCompleto('Diana', 'Lagos', 'Perez');
@@ -77,7 +77,7 @@ console.log(mensaje); // 'Hola Diana Lopez :)'
 // --
 
 function obtenerMensajeEdad(nombre, edad) {
-	return `${nombre} tiene ${edad} años`;
+  return `${nombre} tiene ${edad} años`;
 }
 let mensaje = obtenerMensajeEdad('Diana', 27);
 console.log(mensaje); // "Diana tiene 27 años"
@@ -88,8 +88,8 @@ console.log(mensaje); // "Diana tiene 27 años"
 const juguetePrecio = 45;
 
 function obtenerMensajeCosto(nombre, cantidadJuguetes) {
-	// console.log(juguetePrecio);
-	return `${nombre} tiene ${cantidadJuguetes} juguetes. Le costo ${cantidadJuguetes * juguetePrecio} soles.`;
+  // console.log(juguetePrecio);
+  return `${nombre} tiene ${cantidadJuguetes} juguetes. Le costo ${cantidadJuguetes * juguetePrecio} soles.`;
 }
 let resultado = obtenerMensajeCosto('Carlos', 3);
 console.log(resultado); // "Carlos tiene 3 juguetes. Le costo 135 soles."
@@ -99,7 +99,7 @@ console.log(resultado); // "Carlos tiene 3 juguetes. Le costo 135 soles."
 const alumnos = [];
 
 function agregarAlumno(nombre) {
-	alumnos.push(nombre);
+  alumnos.push(nombre);
 }
 
 agregarAlumno('Diana');
@@ -198,7 +198,7 @@ for (i = 0; i < 10; ++i) {
 const alumnos = ['Carlos', 'Diana', 'Pedro'];
 
 let i;
-for(i = 0; i < alumnos.length; ++i) {
+for (i = 0; i < alumnos.length; ++i) {
   console.log(`${i} es ${alumnos[i]}`);
 }
 
@@ -210,12 +210,12 @@ let i = 0;
 do {
   i++;
   console.log(i);
-} while(i < 3);
+} while (i < 3);
 
 // while
 let i = 0;
 
-while(i < 3) {
+while (i < 3) {
   i++;
   console.log(i);
 }
@@ -349,7 +349,7 @@ const miBucle = function (f) {
   for (indice = 0; indice < mascotas.length; indice++) {
     const mascota = mascotas[indice];
 
-    f( mascota, indice, mascotas );
+    f(mascota, indice, mascotas);
   }
 
 };
