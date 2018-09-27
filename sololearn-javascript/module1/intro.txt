@@ -49,3 +49,49 @@ The multiplication operator (*) multiplies one number by the other.
 
 
 Operadores Matematicos
+
+Asignacion de Operadoras
+
+You can use multiple assignment operators in one line, such as x -= y += 9.
+
+var result = 20;
+result *= 5;
+
+var result = 20;
+result *= 5; // 100
+
+
+
+Comparison Operators
+var num = 10; 
+undefined
+num == 10
+true
+num == 8
+false
+
+val1 
+==
+ val2 // are equal
+val1 
+!  
+=
+ val2 // not equal
+val1 
+<
+ val2 // less than
+val1 
+===
+ val2 // are strict equal (identical)
+
+ Logical Operators
+lo
+
+
+---
+
+Logical Operators
+(4>2) && (10>15)
+false
+(4>2) && (10>15)
+false
