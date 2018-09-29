@@ -537,12 +537,43 @@ const equipos = ['Arsenal', 'Liverpol', 'Chelsea'];
 equipos.join('-');
 "Arsenal-Liverpol-Chelsea"
 
+//5.- ForEach()
+//El método forEach() ejecuta la función indicada una vez por cada elemento del array.
+const equipos = ['Arsenal', 'Liverpol', 'Chelsea'];
+equipos.forEach(function(element) {
+  console.log(element);
+});
+Arsenal
+Liverpol
+Chelsea
+
+//Array.prototype.map()
+//6.- map() crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos.
+const equipos = ['Arsenal', 'Liverpol', 'Chelsea'];
+const equipoMayus = function (texto) {
+    return `${texto.toUpperCase()}`;
+};
+equipos.map(equipoMayus);
+
+//7.- filter() crea un nuevo array con todos los elementos que cumplan la condición implementada por la función dada.
+const equipos = ['Arsenal', 'Liverpol', 'Chelsea', 'Manchester City'];
+const resultado = equipos.filter(equipos  => equipos .length > 8);
+>resultado
+["Manchester City"]
+
+//8.- reduce(), El método reduce () reduce la matriz a un solo valor.
+const equipos = ['Arsenal', 'Liverpol', 'Chelsea']
+function obtenerNombre(total, nombre) {
+    return total + nombre;
+}
+equipos.reduce(obtenerNombre)
+"ArsenalLiverpolChelsea"
 
 
-forEach
-.map
-.filter
-.reduce , estan recorren
+//9* slice()  devuelve una copia de una parte del array dentro de un nuevo array empezando por inicio hasta fin (fin no incluido). El array original no se modificará.
+const equipos = ['Arsenal', 'Liverpol', 'Chelsea', 'Manchester City'];
+equipos.slice(1,3)
+(2) ["Liverpol", "Chelsea"]
 
 obtener una parte o removerla
 .slice
