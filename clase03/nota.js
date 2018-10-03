@@ -509,3 +509,79 @@ ams_t2@hotmail.com Andrea Moscoso Sivirichi / estudia Ing. Sistemas
 juliusflores92@gmail.com Julio Flores
 alexiseptiniza> alexis espinoza
 renzo.vista@gmail.com  Renzo Castro: Profesor
+
+
+
+//TAREA
+
+//1. El método push() agrega uno o más elementos al final de un array y devuelve la nueva longitud del array.
+
+const equipos = ['Arsenal', 'Liverpol', 'Chelsea'];
+equipos.push('Manchester United');
+//(4) ["Arsenal", "Liverpol", "Chelsea", "Manchester United"]
+
+//2.- Shift: Eliminar elemento del inicio de un Array
+(4) ["Arsenal", "Liverpol", "Chelsea", "Manchester United"]
+equipos.shift();
+(3) ["Liverpol", "Chelsea", "Manchester United"]
+
+//3.- Pop:  Eliminar elemento del final de un Array
+(3) ["Liverpol", "Chelsea", "Manchester United"
+equipos.pop();
+"Manchester United"
+["Liverpol", "Chelsea"]
+
+//4.- JOIN: El método join() une todos los elementos de una matriz (o un objeto similar a una matriz) en una cadena y devuelve esta cadena.
+
+const equipos = ['Arsenal', 'Liverpol', 'Chelsea'];
+equipos.join('-');
+"Arsenal-Liverpol-Chelsea"
+
+//5.- ForEach()
+//El método forEach() ejecuta la función indicada una vez por cada elemento del array.
+const equipos = ['Arsenal', 'Liverpol', 'Chelsea'];
+equipos.forEach(function(element) {
+  console.log(element);
+});
+Arsenal
+Liverpol
+Chelsea
+
+//Array.prototype.map()
+//6.- map() crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos.
+const equipos = ['Arsenal', 'Liverpol', 'Chelsea'];
+const equipoMayus = function (texto) {
+    return `${texto.toUpperCase()}`;
+};
+equipos.map(equipoMayus);
+
+//7.- filter() crea un nuevo array con todos los elementos que cumplan la condición implementada por la función dada.
+const equipos = ['Arsenal', 'Liverpol', 'Chelsea', 'Manchester City'];
+const resultado = equipos.filter(equipos  => equipos .length > 8);
+>resultado
+["Manchester City"]
+
+//8.- reduce(), El método reduce () reduce la matriz a un solo valor.
+const equipos = ['Arsenal', 'Liverpol', 'Chelsea']
+function obtenerNombre(total, nombre) {
+    return total + nombre;
+}
+equipos.reduce(obtenerNombre)
+"ArsenalLiverpolChelsea"
+
+
+//9* slice()  devuelve una copia de una parte del array dentro de un nuevo array empezando por inicio hasta fin (fin no incluido). El array original no se modificará.
+const equipos = ['Arsenal', 'Liverpol', 'Chelsea', 'Manchester City'];
+equipos.slice(1,3)
+(2) ["Liverpol", "Chelsea"]
+
+obtener una parte o removerla
+.slice
+.splice
+
+.reverse
+.sort
+ordenar elementos de un array
+
+.some
+every, averiguarkbkb
