@@ -1,0 +1,2 @@
+Opening the Console
+ - comand + alt + j
