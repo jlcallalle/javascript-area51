@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+	#cabecera {
+		background:#ddd;
+	}
+	#cabecera .menu {
+		background-color:rgb(148,234,117);
+		padding:10px;
+	}
+	#cabecera .menu__item {
+		background-color:coral;
+		padding:10px;
+	}
+	/* los selectores son las clases */
+	</style>
+</head>
+<body>
+	<div id='cabecera'>
+		<nav class="menu">
+			<li class="menu__item"><a href="inicio">Inicio</a></li>
+			<li class="menu__item"><a href="cursos">cursos</a></li>
+			<li class="menu__item"><a href="contacto">contacto</a></li>
+			<li class="menu__item"><a href="acceder">acceder</a></li>
+		</nav>
+	</div>
+	<script>
+		const cabecera = document.getElementById('cabecera');
+		console.log(cabecera);
+
+		//Selecciona elemento, devuelve 1 elemento
+		document.querySelector('.menu');
+
+		//Muestra elemento de la misma clase, como arreglos
+		document.getElementsByClassName('menu');
+
+		//Muestra 1 elemento
+		document.querySelector('#cabecera')
+
+		//Muestra 1 elemento, si el array solo tiene 1 elemento
+		document.getElementById('cabecera');
+
+	</script>
+</body>
+</html>
