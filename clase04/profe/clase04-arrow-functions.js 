@@ -47,7 +47,6 @@ const sumarDoble = a => a + a;
 // Ejemplo
 
 const numeros = [1, 2, 3, 4];
-
 numeros.map(sumarDoble); // [2, 4, 6, 8]
 numeros.map(a => a + a); // // [2, 4, 6, 8]
 

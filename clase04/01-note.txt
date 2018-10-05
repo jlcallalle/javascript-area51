@@ -1,4 +1,3 @@
-
 ///////////   Ejercicios con Funciones ///////////
 
 //Retornar 5 veces hola, mediante funcion
@@ -59,25 +58,38 @@ console.log(t); //a
 t = letra('Luis', 2)
 console.log(t) // i
 
-//Ejemplo como seria el resultado
-let nombre = 'Area51';
-console.log(nombre[0]); //A
-console.log(nombre[1]); //r
-console.log(nombre[2]); //e
-console.log(nombre[3]); //a
-console.log(nombre[4]); //5
-console.log(nombre[5]); //1
-
 
 //Objetos
-const pattern = {
+const padre = {
   nombre: 'Juan',
-  children: [
-    { 
-      name: 'julio'
+  hijos: [
+    {
+      nombre: 'Pedro'
     },
-    { 
-      name: 'Diana'
+    {
+      nombre: 'Diana',
+      hijos: [
+        {
+          nombre: 'Lucia'
+        }
+      ]
+    }
+  ]
+}
+
+const pattern = {
+  nameb: 'Juan',
+  sons: [
+    {
+      nombre: 'Pedro'
+    },
+    {
+      nombre: 'Diana',
+      hijos: [
+        {
+          nombre: 'Lucia'
+        }
+      ]
     }
   ]
 }
@@ -115,11 +127,9 @@ document //es solo la pantalla = window.document
 document.getElementById
 //Este método pertenece al objeto document, Con él obtendremos el objeto que hace referencia al elemento con un id concreto.
 //document.getElementById('jorge').innerHTML //Muestra contenido
-
 document.getElementsByClassName 
 //Retorna un objecto similar a un array de los elementos hijos que tengan todos los nombres de clase indicados
 document.getElementsByTagName
-
 document.querySelector //Devuelve el primer elemento del documento
 document.querySelectorAll // Devuelve una lista de elementos que conciden con el selector indicado
 
@@ -139,7 +149,7 @@ NHTMLCollection(3)
 //Mostrar todos los p hijas de la clase content-primary 
 document.querySelectorAll('.content-primary p')
 
-//REcorriendo un DOm marcando punto de partida
+//eEcorriendo un DOm marcando punto de partida
 const contents = document.getElementsByClassName('content-primary');
 
 //Mostrar Uno, dos, tress
@@ -162,18 +172,6 @@ Uno
 Dos
 Tres 
 
-//listaHijos.forEach(function), falto completar;
-
 //Obtener Cambios Profe
 //https://bit.ly/2IrIFM6//
 
-addEventListener RIcezics
-
-
-/* Snipet $$(Selector)*/
-//Muestra todas las img de una web:
-
-var images = $$('img');
-for (each in images) {
-  console.log(images[each].src);
-}
