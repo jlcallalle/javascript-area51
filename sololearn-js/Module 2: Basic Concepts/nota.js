@@ -1,3 +1,5 @@
+//-- CONCEPTOS BÁSICOS 
+
 //-- 1) VARIABLES   
 //Las variables son contenedores para almacenar valores de datos.
 //El valor de una variable puede cambiar a lo largo del programa.
