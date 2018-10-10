@@ -1,6 +1,7 @@
 //-- Conditionals and Loops
 
 // 1)  IF condicional
+
 var myNum1 = 7;
 var myNum2 = 10;
 if (myNum1 < myNum2) {
@@ -9,6 +10,7 @@ if (myNum1 < myNum2) {
 
 
 // 2)  IF else condicional
+
 var myNum1 = 7;
 var myNum2 = 10;
 if (myNum1 > myNum2) {
@@ -25,6 +27,7 @@ a < b ? console.log('si') : console.log('no');
 
 
 // 3)  IF else IF condicional
+
 var course = 1;
 if (course == 1) {
   document.write("<h1>HTML Tutorial</h1>");
@@ -35,6 +38,7 @@ if (course == 1) {
 }
 
 // 4)  Switch condicional
+
 // En los casos en que necesite probar múltiples condiciones
 // el valor de la expresion es comparado en cada caso
 switch (expression) {
@@ -74,6 +78,7 @@ switch (day) {
 
 
 // 5)  The For Loop
+
 //js tiene 3 tipos de bucles: a)for, b) while y c) do while.
 
 //a) for
@@ -150,4 +155,36 @@ while (x <= 5) {
 }
 
 
-// 6) Do White Loop
+// 7) Do White Loop
+//El bucle do ... while es una variante del bucle while.Este bucle ejecutará el bloque de código una vez, antes de verificar si la condición es verdadera, y luego repetirá el bucle mientras la condición sea verdadera.
+
+var i=20;
+do {  
+  document.write(i + "<br />");
+  i++;  
+}
+while (i<=25); 
+
+//El bucle siempre se ejecutará al menos una vez, incluso si la condición es falsa, porque el bloque de código se ejecuta antes de que se pruebe la condición.
+
+
+// 8) Brak y Continue
+
+//Continue: La instrucción continue solo interrumpe una iteración en el bucle y continúa con la siguiente iteración.
+// El valor 5 no se imprime, porque continuar omite esa iteración del bucle.
+
+for (i = 0; i <= 10; i++) {
+  if (i == 5) {
+     continue; 
+  }
+  document.write(i + "<br />");
+}
+
+var sum=0; 
+for(i=4; i<8; i++) {
+  if (i == 6) {
+    continue; 
+  }
+  sum += i;
+}
+document.write(sum);
