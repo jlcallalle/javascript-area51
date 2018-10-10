@@ -47,7 +47,7 @@ sayHello("Sarah");
 sayHello("John");
 
 //-- 3) Múltiples Parametros Funciones
-// You can define multiple parameters for a function by comma-separating them. 
+// Puedes definir multiples parametros, agregando comas
 
 function myFunc(x, y) {
     // some code
@@ -61,18 +61,20 @@ function myFunc(x, y) {
     if(x>y) {
     document.write(x);
     }
-    else {
+    else { 
     document.write(y);
     }
 }
 test(5, 8);
 
-//When calling the function, provide the arguments in the same order in which you defined them.
+//Al llamar a la función, proporcione los argumentos en el mismo orden en que los definió.
+
 function sayHello(name, age) {
     document.write( name + " is " + age + " years old.");
   }
   
   sayHello("John", 20)
+  //Respetar los índices de argumentos
   //Outputs "John is 20 years old."
 
-  //If you pass more arguments than are defined, they will be assigned to an array called arguments. They can be used like this: arguments[0], arguments[1], etc.
+//Si pasa más argumentos de los que están definidos, se asignarán a una matriz llamada argumentos. Se pueden usar así: argumentos[0], argumentos[1], etc.
