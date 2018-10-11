@@ -175,3 +175,5 @@ Tres
 //Obtener Cambios Profe
 //https://bit.ly/2IrIFM6//
 
+
+//Obtener estilos de id, clases con js: document.defaultView.getComputedStyle(progreso).getPropertyValue("font-size");
