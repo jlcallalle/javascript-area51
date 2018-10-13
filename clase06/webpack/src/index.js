@@ -6,6 +6,8 @@ import _ from 'lodash';
 
 // importo la proiedad de un objeto
 import { sumar, restar, multiplicar, dividir } from './modules/utils';
+
+import Humano from './modules/Humano';
 // import { restar } from './modules/utils';
 // import { multiplicar } from './modules/utils';
 // import { dividir } from './modules/utils';
@@ -33,3 +35,6 @@ const personas = [
 ];
 
 console.log( personas.map(item => item.edad) );
+
+const pedroHumano = new Humano();
+console.log(pedroHumano);
