@@ -1,0 +1,30 @@
+Webpack, despues del brake
+- Instalamos eslint
+
+https://medium.com/@Tunmise/set-up-eslint-with-airbnb-style-guide-in-5-minutes-d7b4cc5707f8
+
+--
+/src/Modules/utils.mjs
+ES6
+    Import util from (arriba)
+NodeJS (Commonts)
+    const utils = Requiere ();
+
+Convenciones js
+Standar: Standar
+Google: standar  manejable
+Arib&B: es mas manejable y usada
+
+-
+
+En Terminal
+A51MM-01:webpack alumno$ node_modules/.bin/eslint 
+A51MM-01:webpack alumno$ node_modules/.bin/eslint --init
+Successfully created .eslintrc.js 
+
+En el código vemos que muestra error en consola, si deseamos omitir, hacemos un bloqueo:
+
+"no-console": [
+    "error",
+    "never"
+]

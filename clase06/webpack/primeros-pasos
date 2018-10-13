@@ -1,0 +1,13 @@
+1) crear carpeta proyecto, se necesita 3 files
+
+- webpack.conf.js
+- .babelrc
+- borwserlist
+
+2) npm install --save-dev webpack webpack-cli
+babel, present-evn babel-loader
+
+3) copiar texo config en .babelrc
+   copiar configuracion a webpack.config.js
+   agregar script en package.json
+4) creamos una carpeta scr / index.js
