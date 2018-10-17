@@ -387,9 +387,15 @@ prueba(mostrar);
 // -- .map
 
 const alumnos = [
-  { nombre: 'Pedro', edad: 23 },
-  { nombre: 'Juan', edad: 21 },
-  { nombre: 'Rosa', edad: 25 }
+  { nombre: 'Pedro', 
+    edad: 23 
+  },
+  { nombre: 'Juan',
+    edad: 21 
+  },
+  { nombre: 'Rosa',
+   edad: 25 
+  }
 ];
 
 const cambiar = function (alumno) {
