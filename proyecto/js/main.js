@@ -5,9 +5,13 @@ fetch('http://data.fixer.io/api/latest?access_key=9e1910b221f5db999a84e0c82d049c
     console.log(json);
 
     const precioDolar = json.rates.USD;
-    //const listaTipos = json.rates;
+    const listaTipos = json.rates;
+    const keynames = Object.keys(listaTipos);
+    const valores = Object.values(listaTipos);
     console.log(`El precio del Dolar es ${precioDolar}`)
-    //console.log(listaTipos);
+    //console.log(`listaTipo ${listaTipos}`);
+    console.log(`keynames ${keynames}`);
+    console.log(`valores ${valores}`);
 
     const inputEuro = document.querySelector('#input-euros');
     const inputDolar = document.querySelector('#input-dolar');
@@ -22,44 +26,46 @@ fetch('http://data.fixer.io/api/latest?access_key=9e1910b221f5db999a84e0c82d049c
     })
 
 
-  })
+    //Select
+    const selectTipo = document.querySelector('#select-tipo');
+    const inputMoneda = document.querySelector('#inputMoneda');
+    const dolarSelect = document.querySelector('#dolarSelect');
+    const btnEnvioSelect = document.querySelector('#btn-envio-select');
 
-
-const lista = [
-  {  
-    "success":true,
-    "timestamp":1539793148,
-    "base":"EUR",
-    "date":"2018-10-17",
-    "rates":{  
-        "AED":4.237317,
-        "AFN":87.740761,
-        "ALL":125.263407,
-        "AMD":558.249306,
-        "ZWL":371.88444
+    //Mostrar listado del select
+    for (i = 0; i < keynames.length; ++i) {
+      var opt = keynames[i];
+      selectTipo.innerHTML += `<option value = '${valores[i]}'> ${keynames[i]} </option>`;
     }
-  }
-];
 
-lista.forEach(function (alumno) {
-  //console.log(alumno.rates);
-});
+    //obtener valores del select
+    selectTipo.addEventListener('change', event => {
+      const valorSelect = event.target.value;
+      console.log(valorSelect);
+      const cantidad = document.querySelector('#cantidad');
+      cantidad.innerHTML = valorSelect;
 
+      const showPrecio = document.querySelector('#precio')
+      showPrecio.style.display = 'block';
 
-const selectTipo = document.querySelector('#select-tipo');
-const inputDolarSelect = document.querySelector('#input-dolar-select');
-const btnEnvio = document.querySelector('#btn-envio-select');
-const agregarSelect = lista[0].rates;
-//console.log('array de objetos: ', agregarSelect);
+      if (valorSelect == 'Selecccione') {
+        showPrecio.style.display = 'none';
+      }
+    })
 
-//-- agregando array estatico
-const tipo = ['1', '2', '3'];
-//onsole.log(tipo);
+    //calculo
+    btnEnvioSelect.addEventListener('click', event => {
+      const precioCantidad = document.querySelector('#cantidad').textContent;
+      const valorMoneda = inputMoneda.value;
+      const calculo = valorMoneda * precioCantidad; 
+      const calculoUSD = calculo * precioDolar;
+      const calculoUSDFinal = calculoUSD.toFixed(2);
+      console.log('precio cantidad', precioCantidad);
+      console.log('valor moneda', valorMoneda);
+      console.log('calculo', calculo);
+      console.log('calculoUSD', calculoUSD);
+      dolarSelect.value = calculoUSDFinal;
+    })
 
-let i;
-for (i = 0; i < tipo.length; ++i) {
-  var opt = tipo[i];
-  //console.log(opt)
-  selectTipo.innerHTML += `<option> ${tipo[i]} </option>`;
-}
+  })
 
