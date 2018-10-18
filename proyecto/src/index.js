@@ -96,8 +96,8 @@ const resultadoSumar = sumar(5, 2);
 
 
 import { multiplicar, saludo} from './modules/calculo';
-const resultadoMultiplicar = multiplicar(5, 3);
+const resultadoMultiplicar = multiplicar(5, 10);
 
 console.log('El resultado de la suma es', resultadoSumar);
 console.log('El resultado de la multiplicar es:', resultadoMultiplicar);
-saludo()
+saludo();
