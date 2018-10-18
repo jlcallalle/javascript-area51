@@ -1,10 +1,9 @@
-console.log('start project');
-
 fetch('http://data.fixer.io/api/latest?access_key=9e1910b221f5db999a84e0c82d049cf0')
   .then(response => response.json())
   .then(json => {
     console.log(json);
 
+    //manipular json
     const precioDolar = json.rates.USD;
     const listaTipos = json.rates;
     const keynames = Object.keys(listaTipos);
@@ -14,11 +13,14 @@ fetch('http://data.fixer.io/api/latest?access_key=9e1910b221f5db999a84e0c82d049c
     //console.log(`keynames ${keynames}`);
     //console.log(`valores ${valores}`);
 
+
+    //-- EJERCICIO 1:  Calcular: EUR a USD  
+
     const inputEuro = document.querySelector('#input-euros');
     const inputDolar = document.querySelector('#input-dolar');
     const btnEnvio = document.querySelector('#btn-envio');
-
-    btnEnvio.addEventListener('click', event => {
+    
+    const onClickCalcular = event => {
       const valorEuro = inputEuro.value;
       const convertir = parseInt(valorEuro) * precioDolar;
       const resultadoDecimal = convertir.toFixed(2);
@@ -29,24 +31,27 @@ fetch('http://data.fixer.io/api/latest?access_key=9e1910b221f5db999a84e0c82d049c
       } else {
         alert('Ingresar cantidad de euros');
       }
+    };
+    btnEnvio.addEventListener('click', onClickCalcular )
 
-    })
 
 
-    //Select
+
+    //-- EJERCICIO 2:  Calcular: SELECT a USD  
+  
     const selectTipo = document.querySelector('#select-tipo');
     const inputMoneda = document.querySelector('#inputMoneda');
     const dolarSelect = document.querySelector('#dolarSelect');
     const btnEnvioSelect = document.querySelector('#btn-envio-select');
 
-    //Mostrar listado del select
-    for (i = 0; i < keynames.length; ++i) {
+    //-- Mostrar Select Tipo Cambio
+    keynames.forEach(function (key, i, arreglo) {
       var opt = keynames[i];
       selectTipo.innerHTML += `<option value = '${valores[i]}'> ${keynames[i]} </option>`;
-    }
+    });
 
-    //obtener valores del select
-    selectTipo.addEventListener('change', event => {
+    //-- Mostrar Precio
+    const onChangeSelect =  event => {
       const valorSelect = event.target.value;
       console.log(valorSelect);
       const cantidad = document.querySelector('#cantidad');
@@ -58,10 +63,11 @@ fetch('http://data.fixer.io/api/latest?access_key=9e1910b221f5db999a84e0c82d049c
       if (valorSelect == 'Selecccione') {
         showPrecio.style.display = 'none';
       }
-    })
+    };
+    selectTipo.addEventListener('change', onChangeSelect);
 
-    //calculo
-    btnEnvioSelect.addEventListener('click', event => {
+   
+    const onClickCalcularSelect = event => {
       const precioCantidad = document.querySelector('#cantidad').textContent;
       const valorMoneda = inputMoneda.value;
       const calculo = valorMoneda * precioCantidad;
@@ -71,17 +77,27 @@ fetch('http://data.fixer.io/api/latest?access_key=9e1910b221f5db999a84e0c82d049c
       //console.log('valor moneda', valorMoneda);
       //console.log('calculo', calculo);
       //console.log('calculoUSD', calculoUSD);
-
       if (!valorMoneda == '') {
         dolarSelect.value = calculoUSDFinal;
       } else {
         alert('Ingresar cantidad moneda');
       }
+    };
 
-    })
-
+    btnEnvioSelect.addEventListener('click', onClickCalcularSelect);
   })
 
 
 
-console.log('fin project');
+// ./src/index.js
+//import: importa funciones que han sido exportadas desde un módulo externo
+import { sumar } from './modules/utils';
+const resultadoSumar = sumar(5, 2);
+
+
+import { multiplicar, saludo} from './modules/calculo';
+const resultadoMultiplicar = multiplicar(5, 3);
+
+console.log('El resultado de la suma es', resultadoSumar);
+console.log('El resultado de la multiplicar es:', resultadoMultiplicar);
+saludo()
