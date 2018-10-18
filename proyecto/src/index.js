@@ -1,3 +1,4 @@
+console.log('start project');
 
 fetch('http://data.fixer.io/api/latest?access_key=9e1910b221f5db999a84e0c82d049cf0')
   .then(response => response.json())
@@ -8,10 +9,10 @@ fetch('http://data.fixer.io/api/latest?access_key=9e1910b221f5db999a84e0c82d049c
     const listaTipos = json.rates;
     const keynames = Object.keys(listaTipos);
     const valores = Object.values(listaTipos);
-    console.log(`El precio del Dolar es ${precioDolar}`)
+    //console.log(`El precio del Dolar es ${precioDolar}`)
     //console.log(`listaTipo ${listaTipos}`);
-    console.log(`keynames ${keynames}`);
-    console.log(`valores ${valores}`);
+    //console.log(`keynames ${keynames}`);
+    //console.log(`valores ${valores}`);
 
     const inputEuro = document.querySelector('#input-euros');
     const inputDolar = document.querySelector('#input-dolar');
@@ -21,8 +22,14 @@ fetch('http://data.fixer.io/api/latest?access_key=9e1910b221f5db999a84e0c82d049c
       const valorEuro = inputEuro.value;
       const convertir = parseInt(valorEuro) * precioDolar;
       const resultadoDecimal = convertir.toFixed(2);
-      inputDolar.value = resultadoDecimal;
-      console.log(`La conversion de ${valorEuro} euros equivale a:  ${resultadoDecimal}`);
+
+      if (!valorEuro == '') {
+        inputDolar.value = resultadoDecimal;
+        console.log(`La conversion de ${valorEuro} euros equivale a:  ${resultadoDecimal} USD`);
+      } else {
+        alert('Ingresar cantidad de euros');
+      }
+
     })
 
 
@@ -57,15 +64,24 @@ fetch('http://data.fixer.io/api/latest?access_key=9e1910b221f5db999a84e0c82d049c
     btnEnvioSelect.addEventListener('click', event => {
       const precioCantidad = document.querySelector('#cantidad').textContent;
       const valorMoneda = inputMoneda.value;
-      const calculo = valorMoneda * precioCantidad; 
+      const calculo = valorMoneda * precioCantidad;
       const calculoUSD = calculo * precioDolar;
       const calculoUSDFinal = calculoUSD.toFixed(2);
-      console.log('precio cantidad', precioCantidad);
-      console.log('valor moneda', valorMoneda);
-      console.log('calculo', calculo);
-      console.log('calculoUSD', calculoUSD);
-      dolarSelect.value = calculoUSDFinal;
+      //console.log('precio cantidad', precioCantidad);
+      //console.log('valor moneda', valorMoneda);
+      //console.log('calculo', calculo);
+      //console.log('calculoUSD', calculoUSD);
+
+      if (!valorMoneda == '') {
+        dolarSelect.value = calculoUSDFinal;
+      } else {
+        alert('Ingresar cantidad moneda');
+      }
+
     })
 
   })
 
+
+
+console.log('fin project');
