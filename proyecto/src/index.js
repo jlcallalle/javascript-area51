@@ -53,7 +53,7 @@ fetch('http://data.fixer.io/api/latest?access_key=9e1910b221f5db999a84e0c82d049c
     //-- Mostrar Precio
     const onChangeSelect =  event => {
       const valorSelect = event.target.value;
-      console.log(valorSelect);
+      console.log('valor select', valorSelect);
       const cantidad = document.querySelector('#cantidad');
       cantidad.innerHTML = valorSelect;
 
@@ -69,6 +69,7 @@ fetch('http://data.fixer.io/api/latest?access_key=9e1910b221f5db999a84e0c82d049c
    
     const onClickCalcularSelect = event => {
       const precioCantidad = document.querySelector('#cantidad').textContent;
+      //console.log(typeof precioCantidad)
       const valorMoneda = inputMoneda.value;
       const calculo = valorMoneda * precioCantidad;
       const calculoUSD = calculo * precioDolar;
