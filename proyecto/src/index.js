@@ -8,8 +8,8 @@ fetch('http://data.fixer.io/api/latest?access_key=9e1910b221f5db999a84e0c82d049c
     const listaTipos = json.rates;
     const keynames = Object.keys(listaTipos);
     const valores = Object.values(listaTipos);
-    //console.log(`El precio del Dolar es ${precioDolar}`)
-    //console.log(`listaTipo ${listaTipos}`);
+    console.log(`El precio del Dolar es ${precioDolar}`)
+    console.log(`listaTipo ${listaTipos}`);
     //console.log(`keynames ${keynames}`);
     //console.log(`valores ${valores}`);
 
