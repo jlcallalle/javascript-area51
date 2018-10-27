@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .wrapper {
+        display:flex;
+    }
+    .box-main {
+        display: flex;
+        padding: 10px;
+        width: 20%;
+    }
+    .box-1 {
+        display: flex;
+        flex-direction: column;
+        padding: 0 11px;
+    }
+
+    .box-traslado {
+        display: flex;
+        align-items: center;
+    }
+
+    .box-traslado div {
+        padding: 0 9px;
+    }
+
+    .direccion {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    </style>
+</head>
+<body>
+    <h1>Proyecto Final</h1>
+    <div class="wrapper">
+        <div class="box-main">
+            <div class="box-1">
+                <input id="txtMensaje" type="text" placeholder="Ingrese texto">
+                <button id="btnAgregar" type="button">Agregar</button>
+            </div>
+            <div class="box-2">
+                <div id="contenido" class="contenido">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="box-traslado">
+            <div id="col1" class="col1">
+                <div>Palabra1</div>
+                <div>Palabra2</div>
+                <div>Palabra3</div>
+            </div>
+            <div class="direccion">
+                    <button id="btnRegresar" type="button"> < </button>
+                    <button id="btnSiguiente" type="button"> > </button>
+            </div>
+            <div id="col2" class="col2">
+               
+                
+                
+            </div>
+        </div>
+            
+    </div>
+
+    
+    <script src="main.js"></script>
+</body>
+</html>
