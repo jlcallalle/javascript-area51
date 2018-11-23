@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calculadora en JS - ES6</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+ 
+
+  <div ng-app="appleCalculator">
+    <div class="calculator">
+      <input id="resultado" class="readout" type='text'>
+      <div class="keys">
+        <div class="row">
+          <button class="key misc">C</button>
+          <button class="key misc"><sup>+</sup>/<sub>−</sub></button>
+          <button class="key misc">%</button>
+          <button class="key function dividir">÷</button>
+        </div>
+        <div class="row">
+          <button class="key numeric" >7</button>
+          <button class="key numeric" >8</button>
+          <button class="key numeric" >9</button>
+          <button class="key function multiplicar">×</button>
+        </div>
+        <div class="row">
+          <button class="key numeric" >4</button>
+          <button id="num5" class="key numeric" >5</button>
+          <button id="num6" class="key numeric" >6</button>
+          <button class="key function dividir">−</button>
+        </div>
+        <div class="row">
+          <button class="key numeric" >1</button>
+          <button class="key numeric" >2</button>
+          <button class="key numeric" >3</button>
+          <button id="sumar" class="key function sumar">+</button>
+        </div>
+        <div class="row">
+          <button class="key numeric double">0</button>
+          <button class="key numeric">.</button>
+          <button class="key function last igual">=</button>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>
