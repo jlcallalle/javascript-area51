@@ -15,12 +15,13 @@
 
 ## Clase 3
 
+- Ejercicios: `Condicionales` , `Bucles`.
 - Ejercicios: `.map` , `.forEach` , `.reduce` y `.filter`.
 
 
 ## Clase 4
 
-- [Glosario 4](./docs/glosario-4.md).∂
+- [Glosario 4](./docs/glosario-4.md).
 - [DOM: Document Object Model](./docs/js-dom.md).
 - DOM: getElementById, getElementsByClassName, getElementsByTagName, querySelector, querySelectorAll.
 
