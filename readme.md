@@ -5,7 +5,7 @@
 - [Git: Glosario y comandos básicos](./docs/git.md).
 
 
-## Clase 02
+## Clase 2
 
 
 - [Variables](./docs/js-variables.md).
