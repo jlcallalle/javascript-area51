@@ -28,7 +28,7 @@
 
 ## Clase 5
 
-- Ejercicios: `Funciones` , `Promesas` y `Fetch`.
+- Ejercicios: `WebPack` , `Funciones` , `Promesas` y `Fetch`.
 
 
 ## Clase 6
