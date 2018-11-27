@@ -239,14 +239,9 @@ for (i = 0; i < 10; ++i) {
     console.log('FINAL');
 }
 
-//breack, finaliza
-//continuo, no contnua el siguiente, pero si itera
-
-
-// Ejercicios
+//breack
 
 // recorrer un array
-
 const alumnos = ['carlos','diana','pedro'];
 
 let i;
@@ -257,6 +252,16 @@ for ( i = 0; i < alumnos.length; ++i) {
 
 // --
 
+
+// do ... while
+let i = 0;
+
+do {
+  i++;
+  console.log(i);
+} while (i < 3);
+
+
 // while
 let i = 0;
 
@@ -265,7 +270,9 @@ while (i < 3) {
     console.log(i);
 }
 
-// for in
+// for in : intera sobre todos los elementos de un objeto.
+// for (variable in objeto) { ... }
+
 let key;
 const auto = { marca: 'ford', color: 'azul' };
 
@@ -276,7 +283,9 @@ for (key in auto) {
 // color
 
 
-// for of   // ES6+
+// for of   // ES6+  // itera a través de elementos iterables (array, map, set)
+// for (variable of iterable) { ... }
+
 let alumno;
 const alumnos = ['Pedro', 'Diana', 'Jorge'];
 
@@ -287,7 +296,9 @@ for (alumno of alumnos) {
 // Diana
 // Jorge
 
-// --
+// -- Array forEach
+// El método forEach() ejecuta la función indicada una vez por cada elemento del array.
+// arr.forEach(function callback(currentValue, index, array) {});
 
 const alumnos = ['Carlos', 'Diana', 'Pedro'];
 
@@ -313,6 +324,8 @@ const mostrarAlumno = function (alumno) {
 alumnos.forEach(mostrarAlumno);
 
 // -- Array map
+//  crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos.
+// var nuevo_array = arr.map(function callback(currentValue, index, array) { // Elemento devuelto de nuevo_array }
 
 const alumnos = ['Carlos', 'Diana', 'Pedro'];
 
@@ -323,7 +336,14 @@ const convertirAMayusculas = function (texto) {
 const alumnosMayuscula = alumnos.map(convertirAMayusculas);
 console.log(alumnosMayuscula);
 
+
+//ahora convertir a minúscula
+const convertirMayusculas = alumnos.map(function (texto) {
+  return texto.toLowerCase();
+})
+
 // --
+
 
 const numeros = [2, 3, 4];
 
@@ -454,7 +474,8 @@ const alumnos = [
   forEach
   .map
   .filter
-  .reduce , estan recorren
+  .reduce , estan recorr
+  en
 
   obtener una parte o removerla
   .slice
@@ -511,7 +532,6 @@ alexiseptiniza> alexis espinoza
 renzo.vista@gmail.com  Renzo Castro: Profesor
 
 
-
 //TAREA
 
 //1. El método push() agrega uno o más elementos al final de un array y devuelve la nueva longitud del array.
@@ -561,7 +581,9 @@ const resultado = equipos.filter(equipos  => equipos .length > 8);
 >resultado
 ["Manchester City"]
 
-//8.- reduce(), El método reduce () reduce la matriz a un solo valor.
+//8.- reduce(), El método reduce () aplica una función a un acumulador y a cada valor de un array (de izquierda a derecha) para reducirlo a un único valor.
+// var resultado = arr.reduce(funcion[, valorInicial]);
+
 const equipos = ['Arsenal', 'Liverpol', 'Chelsea']
 function obtenerNombre(total, nombre) {
     return total + nombre;

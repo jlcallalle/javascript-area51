@@ -15,7 +15,7 @@
 
 ## Clase 3
 
-- Ejercicios: `Condicionales` , `Bucles`.
+- Ejercicios: `Condicionales` , `Bucles`,  `Arrays`.
 - Ejercicios: `.map` , `.forEach` , `.reduce` y `.filter`.
 
 
