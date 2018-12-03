@@ -54,13 +54,17 @@ fetch('https://jsonplaceholder.typicode.com/users')
 	.then(json => {
 		console.log(json);
 		const nombres = json.map(user => user.name);
-		console.log(nombres);
+    console.log(nombres);
+    
+    //document.getElementById("jorge").innerHTML = nombres;
 
 		const email = json.map(user => user.email);
 		console.log(email);
 
 		const empresa = json.map(user => user.company.name);
-		console.log(empresa);
+    console.log(empresa);
+    
+
 
 	})
 

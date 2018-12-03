@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Arsenal",
+    "code": "ARS",
+    "pj": "6",
+    "goles": "6",
+    "empate": "0",
+    "perdido": "0",
+    "gf": "14",
+    "gc": "2",
+    "dg": "12",
+    "pts": "18"
+  },
+  {
+    "name": "Chelsea",
+    "code": "CHE",
+    "pj": "6",
+    "goles": "8",
+    "empate": "4",
+    "perdido": "1",
+    "gf": "12",
+    "gc": "5",
+    "dg": "15",
+    "pts": "20"
+  },
+  {
+    "name": "Tottenham Hotspur",
+    "code": "TOT",
+    "pj": "5",
+    "goles": "3",
+    "empate": "2",
+    "perdido": "2",
+    "gf": "19",
+    "gc": "0",
+    "dg": "19",
+    "pts": "14"
+  }
+]
