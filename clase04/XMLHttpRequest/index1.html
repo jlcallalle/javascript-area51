@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Using the XMLHttpRequest object</title>
+</head>
+<body>
+
+  <button type="button" onclick="loadXMLDoc()">Change Content</button>
+  <p id="demo" style="border:1px solid red;"></p>
+
+
+<p>Ejemplo de cómo usar:</p>
+<pre>
+var request = new XMLHttpRequest();
+request.open('GET', '/my/url', true);
+</pre>
+
+  <script>
+    function loadXMLDoc() {
+      //console.log('XMLHttpRequest abc 123');
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("demo").innerHTML =
+              this.responseText;
+          }
+        };
+        xhttp.open("GET", "xmlhttp_info.txt", true);
+        xhttp.send();
+      }
+
+
+  </script>
+
+</body>
+</html>
+
+

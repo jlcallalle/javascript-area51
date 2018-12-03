@@ -27,6 +27,7 @@ alumnos.map(a => a.edad).reduce((a, b) => (a + b));
 //ES5
 var request = new XMLHttpRequest();
 request.open('GET', '/my/url', true);
+// El objeto XMLHttpRequest se puede usar para solicitar datos de un servidor web.
 
 //ES6 
 fech()

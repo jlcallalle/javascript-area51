@@ -136,11 +136,12 @@ document.querySelector //Devuelve el primer elemento del documento
 document.querySelectorAll // Devuelve una lista de elementos que conciden con el selector indicado
 
 
+/*
 
 HTMLCollection vs. NodeList
 Cuando usamos .getElementsByClassName o .getElementsByTagName el tipo de datos retornado es HTMLCollection y cuando usamos .querySelectorAll el tipo de dato retornado es NodeList
 
-
+*/
 
 //Link Ejercicio
 https://bit.ly/2QdSIHo
