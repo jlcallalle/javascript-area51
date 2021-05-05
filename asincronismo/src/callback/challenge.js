@@ -3,8 +3,10 @@
 // Instanciando el request.
 //Permite hacer peticiones a algun servidor en la nube : instalamos: npm install xmlhttprequest --save
 
+// importamos el modulo para hacer las peticiones
 let XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 //por ahora no usamos fech ya que es una implementacion ES6, y utiliza promesa por ello vamos haciendo primero de esta forma básica.
+let API = 'https://rickandmortyapi.com/api/character/';
 
 //trae información de la API
 function fechData(url_api, callback) {
@@ -40,11 +42,11 @@ function fechData(url_api, callback) {
             */
            if(xhttp.status === 200) {
                //Estandar de node con callbacks, primer parametro error, segundo el resultado
-               callback(null, JSON.parse(xhttp.responseText))
+               callback(null, JSON.parse(xhttp.responseText));
                //aqui tengo que parsear porque tengo un string y no podre accerder a los valores.
            } else {
-                const error = new Error('Error ' + url_api);
-                return callback(error, null)
+                let error = new Error('Error: ' + url_api);
+                return callback(error, null);
            }
 
        }
@@ -53,3 +55,28 @@ function fechData(url_api, callback) {
     //Envio de la solicitud.
     xhttp.send();
 }
+
+//callback :mostrar datos resultantes de la petición
+fechData(API, function(error1, data1) {
+    //data1: se utliza esta funcion para realizar las 3 peticiones
+    // si error, matamos retornando un error
+    if(error1) return console.error(error1);
+    //en api cuenta con results visto en postman
+    fechData(API + data1.results[0].id, function (error2, data2) {
+        if (error2) return console.log(error2);
+        fechData(data2.origin.url, function(error3, data3) {
+            if (error3) return console.log(error3);
+
+            // mostramos los resultados :) 
+            console.log(data1.info.count); //cantidad personajes
+            console.log(data2.name);
+            console.log(data3.dimension); //obtener dimension
+
+             // rutas de las peticiones en orden
+            console.log(API);
+            console.log(API + data1.results[0].id); 
+            console.log(data2.origin.url); 
+        })
+    })
+
+})
