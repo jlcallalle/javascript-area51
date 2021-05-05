@@ -19,7 +19,10 @@ https://medium.com/@ubykuo/event-loop-la-naturaleza-asincr%C3%B3nica-de-javascri
   
  
 ## Tema 4-Peticiones a APIs usando Callbacks
-## Tema 5-Peticiones a APIs usando Callbacks
+API used to get all the characters: https://rickandmortyapi.com/api/character
+Usar en Postman, llamamos a la api general, luego a un personaje (Dimensión) y a la ubicación
+
+## Tema 5-Múltiples peticiones usando Callbacks
 
 ## Tema 6-Implementando Promesas
 ## Tema 7-Resolver problema con promesas
